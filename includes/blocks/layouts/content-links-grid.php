@@ -34,23 +34,23 @@ if($links):
 
 $count = count($links);
 if($count === 1) {
-  $cols = 'md:grid-cols-1';
+  $cols = 'lg:grid-cols-1';
   $img_size = 'profile';
 } else {
-  $cols = 'md:grid-cols-2';
+  $cols = 'lg:grid-cols-2';
   $img_size = 'thumbnail';
 }
 
 endif;
 ?>
 
-<aside id="<?php echo $id;?>" class="grid <?php echo $cols;?> gap-6 md:bg-neutral-light-100 rounded-md md:p-6">
+<aside id="<?php echo $id;?>" class="grid <?php echo $cols;?> gap-6 lg:bg-neutral-light-100 rounded-md lg:p-6">
   
 <?php if($links) {
   
   foreach($links as $link) {
   
-  $img = get_the_post_thumbnail($link->ID, $img_size, array( 'class' => 'w-full object-cover aspect-video md:aspect-auto md:w-auto bg-accent' ));
+  $img = get_the_post_thumbnail($link->ID, $img_size, array( 'class' => 'w-full object-cover aspect-video lg:aspect-square lg:w-auto bg-accent' ));
 
   if($img) {
 
@@ -60,7 +60,7 @@ endif;
   // var_dump($link);
   ?>
   <?php if(is_admin()) {?>
-    <a class="flex flex-col md:flex-row group items-center bg-gray-100 md:bg-white rounded-md overflow-hidden">
+    <a class="flex flex-col lg:flex-row group items-center bg-neutral-light-100 lg:bg-primary-default rounded-md overflow-hidden">
       <?php if($img) {
         echo $img;
       } else {
@@ -75,7 +75,7 @@ endif;
     </a>
   <?php } else {?>
     
-    <a class="flex flex-col md:flex-row group items-center bg-gray-100 md:bg-white rounded-md overflow-hidden" href="<?php echo get_the_permalink($link->ID);?>" rel="bookmark" aria-label="Read <?php echo get_the_title($link->ID);?>">
+    <a class="flex flex-col lg:flex-row group items-center bg-neutral-light-100 lg:bg-primary-default rounded-md overflow-hidden" href="<?php echo get_the_permalink($link->ID);?>" rel="bookmark" aria-label="Read <?php echo get_the_title($link->ID);?>">
       <?php if($img) {
         echo $img;
       } else {

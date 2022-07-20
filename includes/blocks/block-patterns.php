@@ -143,8 +143,8 @@ function blockhaus_register_patterns() {
       <!-- /wp:image -->
       
       <!-- wp:buttons -->
-      <div class="wp-block-buttons"><!-- wp:button {"backgroundColor":"primary-default","align":"center","className":"is-style-button-retro"} -->
-      <div class="wp-block-button aligncenter is-style-button-retro"><a class="wp-block-button__link has-primary-default-background-color has-background" href="http://ypag.local/about/">Find out more</a></div>
+      <div class="wp-block-buttons"><!-- wp:button {"align":"center","className":"is-style-button-retro"} -->
+      <div class="wp-block-button aligncenter is-style-button-retro"><a class="wp-block-button__link" href="/">Find out more</a></div>
       <!-- /wp:button --></div>
       <!-- /wp:buttons --></section>
       <!-- /wp:group -->
@@ -308,8 +308,8 @@ function blockhaus_register_patterns() {
           'callouts-and-quotes',
         ],
         'content' => '
-        <!-- wp:quote {"className":"blockhaus-quote relative bg-neutral-light-100 flex flex-col items-center text-center gap-2 px-20 py-16 rounded-md border-l-0 outline-4 outline-double outline-accent outline-offset-4 is-style-default","fontSize":"large"} -->
-        <blockquote class="wp-block-quote blockhaus-quote relative bg-neutral-light-100 flex flex-col items-center text-center gap-2 px-20 py-16 rounded-md border-l-0 outline-4 outline-double outline-accent outline-offset-4 is-style-default has-large-font-size"><p>The cure for boredom is curiosity. There is no cure for curiosity.</p><cite>Dorothy Parker</cite></blockquote>
+        <!-- wp:quote {"className":"blockhaus-quote relative bg-neutral-light-100 flex flex-col items-center text-center gap-2 px-12 md:px-20 py-16 rounded-md border-l-0 outline-4 outline-double outline-accent outline-offset-4 is-style-default text-base md:text-lg"} -->
+        <blockquote class="wp-block-quote blockhaus-quote relative bg-neutral-light-100 flex flex-col items-center text-center gap-2 px-12 md:px-20 py-16 rounded-md border-l-0 outline-4 outline-double outline-accent outline-offset-4 is-style-default text-base md:text-lg"><p>The cure for boredom is curiosity. There is no cure for curiosity.</p><cite>Dorothy Parker</cite></blockquote>
         <!-- /wp:quote -->
         ',
       )

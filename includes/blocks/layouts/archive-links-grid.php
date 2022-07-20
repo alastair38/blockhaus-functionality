@@ -33,17 +33,17 @@ if($links):
 
 $count = count($links);
 if($count === 1) {
-  $cols = 'md:grid-cols-1';
+  $cols = 'lg:grid-cols-1';
   $img_size = 'profile';
 } else {
-  $cols = 'md:grid-cols-2';
+  $cols = 'lg:grid-cols-2';
   $img_size = 'thumbnail';
 }
 
 endif;
 ?>
 
-<aside id="<?php echo $id;?>" class="grid <?php echo $cols;?> gap-6 md:bg-neutral-light-100 rounded-md md:p-6">
+<aside id="<?php echo $id;?>" class="grid <?php echo $cols;?> gap-6 lg:bg-neutral-light-100 rounded-md lg:p-6">
   
 <?php 
 
@@ -58,9 +58,9 @@ if( have_rows('archive_links') ):
       
       ?>
       
-      <a class="flex flex-col md:flex-row group items-center bg-gray-100 md:bg-white rounded-md overflow-hidden" href="<?php the_sub_field('link');?>" rel="bookmark" aria-label="Read <?php echo $title;?>">
+      <a class="flex flex-col lg:flex-row group items-center bg-neutral-light-100 lg:bg-primary-default rounded-md overflow-hidden" href="<?php the_sub_field('link');?>" rel="bookmark" aria-label="Read <?php echo $title;?>">
       <?php if($img) {
-        echo wp_get_attachment_image( $img, $img_size, "", array( 'class' => 'w-full object-cover aspect-video md:aspect-auto md:w-auto bg-accent' ));
+        echo wp_get_attachment_image( $img, $img_size, "", array( 'class' => 'w-full object-cover aspect-video lg:aspect-square lg:w-auto bg-accent' ));
       } ?>
       <div class="flex flex-col gap-2 p-6">
         <span class="font-bold"><?php echo $title;?></span>
