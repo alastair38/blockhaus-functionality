@@ -138,3 +138,20 @@ include( plugin_dir_path( __FILE__ ) . 'includes/blocks/register-blocks.php');
 // Include file to register Block Patterns
 
 include( plugin_dir_path( __FILE__ ) . 'includes/blocks/block-patterns.php');
+
+
+add_filter(
+        'wp_content_img_tag',
+        static function ( $image ) {
+                return str_replace( ' sizes="auto, ', ' sizes="', $image );
+        }
+);
+add_filter(
+        'wp_get_attachment_image_attributes',
+        static function ( $attr ) {
+                if ( isset( $attr['sizes'] ) ) {
+                        $attr['sizes'] = preg_replace( '/^auto, /', '', $attr['sizes'] );
+                }
+                return $attr;
+        }
+);
